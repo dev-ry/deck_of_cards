@@ -7,6 +7,19 @@ function deck_o_cards() {
   var cards = []; // deck
   var shuffledCards = []; // deck shuffled
 
+    for (var i = 0; i < suits.length; i++)
+      for (var j = 0; j < values.length; j++)
+        f(values[j]);
+        f(suits[i]);
+
+  var cardObjects {
+    value: values [j],
+    suit: suits [i]
+  }
+
+
+
+
   // Make 52 card objects and store them in the "cards" array
   // Hint: use 2 for loops
 
@@ -22,7 +35,7 @@ function deck_o_cards() {
   // "The deck has {n} cards"
   // "The top card is the {value} of {suit}"
 
-}
+
 
 
 
@@ -30,6 +43,7 @@ function deck_o_cards() {
 // http://stackoverflow.com/a/6274398
 function shuffle(array) {
     var counter = array.length, temp, index;
+    var topCard = index;
 
     // While there are elements in the array
     while (counter > 0) {
@@ -39,6 +53,7 @@ function shuffle(array) {
         // Decrease counter by 1
         counter--;
 
+
         // And swap the last element with it
         temp = array[counter];
         array[counter] = array[index];
@@ -47,3 +62,5 @@ function shuffle(array) {
 
     return array;
 }
+console.log("The deck has " + counter + " cards.");
+console.log("The top card is the " + value + " of" + suit " .")
